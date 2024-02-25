@@ -1,0 +1,442 @@
+.fixed-background {
+  min-height: 100vh; /* Asegúrate de que el contenido tiene suficiente altura para hacer scroll */
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://previews.123rf.com/images/tommisch/tommisch1709/tommisch170900945/86903648-jabones-artesanales-naturales-con-granos-de-caf%C3%A9-toallas-marrones-coco-y-hojas-verdes-sobre-fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Esto hace que la imagen de fondo se quede fija */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+  .content {
+    transition: margin-left 0.3s ease;
+  }
+  
+  .content.expand {
+    margin-left: 200px;
+  }
+
+  .image-slider {
+    max-width: 100%;
+    margin: auto;
+  }
+  
+  /* Custom styles for the carousel captions if needed */
+  .carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+  }
+  
+  /* Ensure the images cover the slide and are responsive */
+  .image-slider .carousel-item {
+    height: 65vh; /* Adjust the height as per your requirement */
+  }
+  
+  .image-slider .carousel-item img {
+    height: 100%;
+    object-fit: cover; /* This will cover the entire area of slide without stretching the image */
+  }
+
+  .custom-component {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .custom-component .text-section h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .custom-component .text-section p {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .custom-component .icon-section {
+    /* Add styling for your icon section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Add a placeholder border or set a fixed height if the icons are not available yet */
+    min-height: 50px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Responsive styling if needed */
+  @media (max-width: 768px) {
+    .custom-component .text-section h1 {
+      font-size: 2rem;
+    }
+  
+    .custom-component .text-section p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* @media (min-width: 992px) {
+    .sidebar {
+      transform: translateX(0);
+    }
+  
+    .content {
+      margin-left: 200px;
+    }
+  } */
+
+  .image-card {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .image-card img {
+    width: 100%;
+    transition: transform 0.5s ease;
+  }
+  
+  .image-card-overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark background on hover */
+    color: #fff;
+    width: 100%;
+    transform: translateY(100%);
+    transition: transform 0.5s ease;
+  }
+  
+  .image-card:hover .image-card-overlay {
+    transform: translateY(0);
+  }
+  
+  .image-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem 1rem 0 1rem;
+  }
+  
+  .image-card-description {
+    padding: 0 1rem 1rem 1rem;
+    font-size: 1rem;
+  }
+
+
+  /* Slider */
+  .slick-slide {
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .slick-slide img {
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    height: auto;
+    transition: transform .3s ease;
+  }
+  
+  .slick-slide h2 {
+    color: #fff; /* Ajusta el color según tu diseño */
+  }
+  
+  .slick-slide p {
+    color: #ccc; /* Ajusta el color según tu diseño */
+  }
+  
+  /* Estilos para los botones y puntos del carrusel */
+  .slick-prev, .slick-next {
+    color: #fff;
+    z-index: 1;
+  }
+  
+  .slick-dots li button:before {
+    font-size: 12px;
+    color: #fff;
+  }
+  
+  /* Efecto de zoom suave al pasar el ratón por encima de la imagen */
+  .slick-slide:hover img {
+    transform: scale(1.05);
+  }
+
+
+  /* AboutUs styles */
+  .about-us-section {
+    background-color: #f8f8f8;
+    padding: 2rem 0;
+  }
+  
+  .about-us-section h1,
+  .about-us-section h2 {
+    color: #2a2a2a;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .service-item,
+  .client-item {
+    margin-bottom: 1rem;
+  }
+  
+  .service-image,
+  .client-logo {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  
+  .service-item h3 {
+    color: #333;
+    font-size: 1.2rem;
+  }
+  
+  /* Asegúrate de que las imágenes de los servicios y los logos de los clientes se ajusten dentro de sus contenedores */
+  .service-image {
+    border-radius: 0.5rem;
+  }
+  
+  .client-logo {
+    display: block;
+    max-height: 100px; /* Ajusta esto según el tamaño de tus logos */
+    margin: 0 auto; /* Centrar logos */
+    padding: 0.5rem; /* Espacio alrededor del logo */
+  }
+  
+  /* Añade media queries para ajustes responsivos */
+  @media (max-width: 768px) {
+    .service-item h3 {
+      font-size: 1rem;
+    }
+  }
+
+
+  /* SideBars */
+
+  /* Sidebar Styles */
+.sidebar {
+  width: 250px; /* or desired width */
+  height: 100vh; /* Full height of the viewport */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Sidebar color */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px; /* Some padding from the top */
+  transition: 0.5s; /* Transition effect when expanding and collapsing the sidebar */
+}
+
+/* Sidebar links */
+.sidebar a {
+  padding: 10px 15px; /* Padding for links */
+  text-decoration: none; /* No underline */
+  font-size: 18px; /* Size of text */
+  color: #818181; /* Item color */
+  display: block; /* Make the links appear below each other */
+  transition: 0.3s; /* Smooth transition effect */
+}
+
+/* Highlight the current link */
+.sidebar a.active {
+  color: #f1f1f1; /* Lighter text for the active link */
+  background: #575757; /* Different background color for the active link */
+}
+
+/* Links change color on hover */
+.sidebar a:hover {
+  color: #ffffff; /* White color on hover */
+  background: #333; /* Darker background on hover */
+}
+
+/* Style for the sidebar close button, if you have one */
+.closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Responsive sidebar - make it fit on smaller screens */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+
+
+/* SideBar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    background-color: #f0f0f0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+    transform: translateX(-100%);
+    z-index: 1000; 
+  }
+  
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .NavLinkStyle{
+    margin-top: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+  }
+
+
+
+  /* Company Values */
+  .CompanyValues h3 {
+    color: #0056b3; /* Un color que coincida con el estilo de tu sitio web */
+    margin-bottom: 0.5rem;
+  }
+  
+  .CompanyValues p {
+    color: #333; /* Color del texto para descripción */
+  }
+  
+  /* Ajustes responsivos */
+  @media (max-width: 768px) {
+    .CompanyValues h3 {
+      font-size: 1.25rem; /* Tamaño más pequeño para dispositivos móviles */
+    }
+  
+    .CompanyValues p {
+      font-size: 1rem; /* Tamaño más pequeño para dispositivos móviles */
+    }
+  }
+
+
+  /* Benefits Subcription */
+
+  /* BenefitsSubscription.css */
+.subscription-section {
+  background-color:  #E8E6FA;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 0.5rem;
+}
+
+.subscription-section h2 {
+  margin-bottom: 1rem;
+}
+
+.subscription-section .btn {
+  background-color: #0056b3;
+  color: white;
+  border: none;
+}
+
+.subscription-section .btn:hover {
+  background-color: #004494;
+}
+
+.subscription-section p {
+  margin-top: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .subscription-section .my-1 {
+    margin-bottom: 0.5rem !important;
+  }
+}
+
+
+h1{
+  color: #2a2a2a;
+}
+  
+ .linerGradient{
+  background: linear-gradient(rgba(19, 20, 20, 0.801), rgb(51, 49, 49));
+} 
+
+
+/* Card css */
+.card {
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 210px 210px 80px;
+  grid-template-areas: "image" "text" "stats";
+  border-radius: 18px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+  font-family: roboto;
+  text-align: center;
+  transition: 0 .5s ease;
+  cursor: pointer;
+  margin: 30px;
+  position: relative;
+}
+.card-image {
+  grid-area: image;
+}
+.card-text {
+  grid-area: text;
+  margin: 25px;
+}
+
+.card-image {
+  grid-area: image;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+
+.card-text h2 {
+  margin-top:0px;
+  font-size:28px;
+}
+.card-text .date {
+  color:  rgb(159, 147, 179);
+  font-size:13px;
+}
+.card-text p {
+  color: grey;
+  font-size:15px;
+  font-weight: 300;
+}
+.card-stats {
+  grid-area: stats; 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: rgb(48, 42, 58);
+  position: absolute; /* Posicionamiento absoluto con respecto al contenedor más cercano con posición relativa */
+  bottom: 0; /* Fija el div en la parte inferior del contenedor */
+  left: 0; /* Alinea el div a la izquierda del contenedor */
+  width: 100%;
+
+}
+.card-stats .stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  padding:10px;
+ 
+}
+
+.card:hover  {
+  transform: scale( 1.15 ) ;
+  box-shadow: 5px 5px 15px rgba( 0 , 0 , 0 , 0.6 ) ;
+}
